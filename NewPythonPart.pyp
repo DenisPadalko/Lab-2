@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Element>
     <Script>
-        <Name>UserPythonParts/NewPart.py</Name>
+        <Name>UserParts/NewPart.py</Name>
         <Title>Lab 2</Title>
         <Version>1.0</Version>
     </Script>
