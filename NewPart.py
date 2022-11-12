@@ -54,27 +54,27 @@ class Beam:
             build_ele.Width.value,
             build_ele.Thickness.value)
 
-        beam_width = build_ele.BeamWidth.value
-        beam_width_bottom = build_ele.BeamWidthBottom.value
+        Beam_width = build_ele.BeamWidth.value
+        Beam_width_bottom = build_ele.BeamWidthBottom.value
 
-        if beam_width > 0:
+        if Beam_width > 0:
             edges = AllplanUtil.VecSizeTList()
             edges.append(1)
             edges.append(3)
 
             err, brep = AllplanGeo.ChamferCalculus.Calculate(
-                brep, edges, beam_width, False)
+                brep, edges, Beam_width, False)
 
             if not GeometryValidate.polyhedron(err):
                 return
 
-        if beam_width_bottom > 0:
+        if Beam_width_bottom > 0:
             edges2 = AllplanUtil.VecSizeTList()
             edges2.append(8)
             edges2.append(10)
 
             err, brep_inter = AllplanGeo.ChamferCalculus.Calculate(
-                brep_inter, edges2, beam_width_bottom, False)
+                brep_inter, edges2, Beam_width_bottom, False)
 
             if not GeometryValidate.polyhedron(err):
                 return
@@ -113,7 +113,7 @@ class Beam:
 
     def top_part(self, build_ele):
         brep = AllplanGeo.BRep3D.CreateCuboid(
-            AllplanGeo.AxisPlacement3D(AllplanGeo.Point3D(0 - (build_ele.Width.value - build_ele.Length.value) / 2, 0, build_ele.Thickness.value + build_ele.CentralHeight.value),
+            AllplanGeo.AxisPlacement3D(AllplanGeo.Point3D(0 - (build_ele.Width2.value - build_ele.Length.value) / 2, 0, build_ele.Thickness.value + build_ele.CentralHeight.value),
                                        AllplanGeo.Vector3D(1, 0, 0),
                                        AllplanGeo.Vector3D(0, 0, 1)),
             build_ele.Width2.value,
@@ -133,15 +133,15 @@ class Beam:
         com_prop.Pen = 1
         com_prop.Color = build_ele.Color.value
 
-        chamfer_width_top = build_ele.BeamWidth2.value
+        Beam_width_top = build_ele.BeamWidth2.value
 
-        if chamfer_width_top > 0:
+        if Beam_width_top > 0:
             edges2 = AllplanUtil.VecSizeTList()
             edges2.append(8)
             edges2.append(10)
 
             err, brep = AllplanGeo.ChamferCalculus.Calculate(
-                brep, edges2, chamfer_width_top, False)
+                brep, edges2, Beam_width_top, False)
 
             if not GeometryValidate.polyhedron(err):
                 return

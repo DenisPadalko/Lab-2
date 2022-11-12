@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Element>
     <Script>
-        <Name>UserParts/NewPart.py</Name>
+        <Name>UserPythonParts\NewPart.py</Name>
         <Title>Lab 2</Title>
         <Version>1.0</Version>
     </Script>
     <Page>
         <Name>Beam3D</Name>
-        <Title>Beam3D</Title>
+        <Text>Beam3D</Text>
         <Parameter>
             <Name>Color</Name>
             <Text>Колір опалубки</Text>
@@ -17,7 +17,7 @@
         <Parameter>
             <Name>Width</Name>
             <Text>Довжина опалубки</Text>
-            <Value>2000.</Value>
+            <Value>480.</Value>
             <ValueType>Length</ValueType>
         </Parameter>
         <Parameter>
@@ -59,7 +59,7 @@
         <Parameter>
             <Name>Width2</Name>
             <Text>Ширина верхньої частини</Text>
-            <Value>600.</Value>
+            <Value>480.</Value>
             <ValueType>Length</ValueType>
         </Parameter>
         <Parameter>
@@ -71,7 +71,7 @@
         <Parameter>
             <Name>BeamWidth2</Name>
             <Text>Загин знизу верхньої частини</Text>
-            <Value>220.</Value>
+            <Value>160.</Value>
             <ValueType>Length</ValueType>
         </Parameter>
         <Parameter>
@@ -83,7 +83,7 @@
         <Parameter>
             <Name>PlateSpace</Name>
             <Text>Відстань до плитки</Text>
-            <Value>60.</Value>
+            <Value>80.</Value>
             <ValueType>Length</ValueType>
         </Parameter>
         <Parameter>
